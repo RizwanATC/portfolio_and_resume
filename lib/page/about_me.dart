@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
-class AboutMe extends StatefulWidget {
-  const AboutMe(BuildContext context, {Key? key}) : super(key: key);
+class AboutMe extends StatelessWidget {
+  final String appBarTitle;
+  final Color appBarBackgroundColor;
+  final Color appBarIconColor;
 
-  @override
-  _AboutMe createState() => _AboutMe();
-}
+  const AboutMe({
+    Key? key,
+    required this.appBarTitle,
+    required this.appBarBackgroundColor,
+    required this.appBarIconColor,
+  }) : super(key: key);
 
-class _AboutMe extends State<AboutMe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,5 +20,3 @@ class _AboutMe extends State<AboutMe> {
     );
   }
 }
-
-
