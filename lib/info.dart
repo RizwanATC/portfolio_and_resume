@@ -17,7 +17,8 @@ class _InfoPageState extends State<InfoPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Container(
+        body:
+        Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [

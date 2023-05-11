@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 import 'package:portfolio_and_resume/page/about_me.dart';
+import 'package:portfolio_and_resume/page/skills.dart';
+
+import 'page/work_exp.dart';
 
 class HiddenDrawer extends StatefulWidget {
   const HiddenDrawer({Key? key}) : super(key: key);
@@ -34,11 +37,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
           selectedStyle: selectedStyle,
           colorLineSelected: Color(0xFFCAF9F7),
         ),
-        AboutMe(
-          appBarTitle: 'About Me',
-          appBarBackgroundColor: Colors.transparent,
-          appBarIconColor: Colors.white,
-        ),
+        AboutMe(),
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(
@@ -47,11 +46,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
           selectedStyle: selectedStyle,
           colorLineSelected: Color(0xFFCAF9F7),
         ),
-        AboutMe(
-          appBarTitle: 'Skills',
-          appBarBackgroundColor: Colors.transparent,
-          appBarIconColor: Colors.white,
-        ),
+        Skills(),
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(
@@ -60,11 +55,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
           selectedStyle: selectedStyle,
           colorLineSelected: Color(0xFFCAF9F7),
         ),
-        AboutMe(
-          appBarTitle: 'Work Experience',
-          appBarBackgroundColor: Colors.transparent,
-          appBarIconColor: Colors.white,
-        ),
+        WorkExp(),
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(
@@ -73,25 +64,23 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
           selectedStyle: selectedStyle,
           colorLineSelected: Color(0xFFCAF9F7),
         ),
-        AboutMe(
-          appBarTitle: 'Education',
-          appBarBackgroundColor: Colors.transparent,
-          appBarIconColor: Colors.white,
-        ),
+        AboutMe(),
       ),
     ];
   }
 
   @override
   Widget build(BuildContext context) {
-    return HiddenDrawerMenu(
-      backgroundColorMenu: Color(0xFF05BFDB),
-      screens: _pages,
-      initPositionSelected: 0,
-      slidePercent: 60,
-      isTitleCentered: true,
+    return Scaffold(
 
+      body: HiddenDrawerMenu(
+        backgroundColorMenu: Color(0xFF05BFDB),
+        screens: _pages,
+        initPositionSelected: 0,
+        slidePercent: 60,
+        isTitleCentered: true,
 
+      ),
     );
   }
 }
